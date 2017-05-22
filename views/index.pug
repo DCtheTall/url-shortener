@@ -1,0 +1,25 @@
+head
+  link(rel="stylesheet" href="/styles.css")
+body
+  div.heading URL Shortening Service
+  div.subheading A project for Free Code Camp by Dylan Cutler
+  div.body
+    b Example shortcut creation:
+    br
+    br
+    | Making a GET request to:
+    div.code https://dcthetall-url-shortener.herokuapp.com/new/https://github.com/DCtheTall
+    br
+    | will get a response like the following:
+    div.code { "originalUrl":"https://github.com/DCtheTall", "shortenedUrl":"https://dcthetall-url-shortener.herokuapp.com/12" }
+    br
+    hr
+    br
+    b Example usage:
+    br
+    br
+    | After creating a shortcut, requesting
+    div.code https://dcthetall-url-shortnener.herokuapp.com/12
+    br
+    | Will redirect to:
+    div.code https://github.com/DCtheTall

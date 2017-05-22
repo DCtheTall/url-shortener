@@ -49,8 +49,8 @@ function getNew(req, res) {
       });
     }))
     .then(([db, shortcut]) => {
-      const shortUrl = `${process.env.DOMAIN}/${shortcut}`;
-      res.json({ originalUrl: url, shortUrl });
+      const shortenedUrl = `${process.env.DOMAIN}/${shortcut}`;
+      res.json({ originalUrl: url, shortenedUrl });
       db.close();
     })
     .catch((error) => {

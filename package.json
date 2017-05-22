@@ -2,10 +2,10 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "A url shortening service which uses MongoDB",
-  "main": "app.js",
+  "main": "bin/start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node bin/start.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
-    "pug": "^2.0.0-rc.1"
+    "pug": "^2.0.0-rc.1",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "dotenv": "^4.0.0"

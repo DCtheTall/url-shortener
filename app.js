@@ -2,7 +2,6 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV !== 'production') require('dot
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
 const routes = require('./routes');
 
 const app = express();
@@ -14,9 +13,4 @@ app.use(bodyParser.json({ limit: '5mb' }));
 
 app.use(routes);
 
-function normalizePort(val) {
-  const port = parseInt(val, 10);
-  return isNaN(port) ? val : port >= 0 ? port : false;
-}
-
-const port = normalizePort(process.env.PORT || 3001);
+module.exports = app;

@@ -7,9 +7,9 @@ function normalizePort(val) {
 }
 
 function onListen() {
-  console.log(`Listening on port ${port}`);
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  console.log(`Listening on ${bind}`);
 }
 
 function onError(err) {
